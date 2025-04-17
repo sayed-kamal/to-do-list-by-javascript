@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+/* start class global */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.line_through{
+    text-decoration: line-through;
+}
+/* end class global */
+.container{
+    width: 80%;
+    margin: 30px auto;
+    
+}
+.container .header{
+    position: relative;
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.container .header .title{
+    width: 98%;
+    padding: 10px;
+    padding-right: 33px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+
+}
+.container .header .alert{
+    position: absolute;
+    bottom: -40px;
+    left: 5%;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 #ececec;
+    transition: all 0.5s;
+    display: none;
+
+}
+.container .header .alert::before{
+    position: absolute;
+    content: "";
+    border: 18px solid;
+    border-color: transparent transparent white transparent;
+    bottom: 100%;
+    transition: all 0.5s;
+}
+@media (min-width: 720px) {
+    .container .header .alert{
+        font-size: 17px;
+        width: 50%;
+    }
+}
+@media ( maxwidth : 360px ) {
+    .container .header .alert{
+       width: 100%;
+    }
+}
+/* .container .header::before{
+    
+    content: "the input is empty , please write task";
+    width: 60%;
+    bottom: -40px;
+    left: 50px;
+    box-shadow: 0 0 10px 0px #ddd;
+    padding: 10px;
+    
+} 
+.container .header::after,
+.container .header::before{
+position: absolute;
+transition:all 0.5s;
+
+
+}
+.container .header::after{
+    content: "";
+    border: 15px solid;
+    border-color: transparent transparent white transparent;
+    top: 63%;
+    left: 65px;;
+} */
+.container .header .plus{
+    position: relative;
+    left: -2%;
+    top: 50%;
+    background-color: #009688;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 40%;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+}
+.container .header .plus:hover {
+    scale: 1.1;
+  
+}
+.container .duty{
+    padding: 10px;
+}
+.container .duty ul{
+    padding: 5px;
+}
+.container .duty ul div{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+     margin: 10px 0;
+}
+.container .duty ul li{
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    list-style-type: "✌️";
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    width: 80%;
+}
+
+.container .duty ul div button{
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    transition: 0.3s;
+    
+}
+.container .duty ul div button:hover{
+    transform: rotate(40deg);
+}
+.completeAll_or_deleteAll{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin-top: 15px;
+    opacity: 0;
+}
+@media (max-width:380px) {
+    .completeAll_or_deleteAll{
+        justify-content: center;
+    }
+}
+.completeAll_or_deleteAll button{
+    padding: 10px 15px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #009688;
+    transition: all 0.5s;
+    position: relative;
+    width: 130px;
+    
+}
+.completeAll_or_deleteAll button:hover{
+    scale: 1.2;
+}
